@@ -8,6 +8,7 @@ class CreditCard:
 
   def validate(self):
     reg_exp = re.compile(r'^(?!.*([0-9])\1{3})([456]\d{3}-?\d{4}-?\d{4}-?\d{4})$')
+    aux = self.number.replace('-', '')
     match = reg_exp.match(self.number)
     if match:
       return True
