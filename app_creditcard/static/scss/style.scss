@@ -16,6 +16,18 @@ body{
   border-radius:5px;
 }
 
+.valid, .invalid{
+  margin: 4px;
+}
+
+.valid{
+  color:green;
+}
+
+.invalid{
+  color:red;
+}
+
 input[type=text]{
   margin:5px 0;
 }

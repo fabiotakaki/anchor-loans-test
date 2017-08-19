@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, g, redirect, url_for, abort, render_template, jsonify
 from creditcard import CreditCard
+from file import File
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -22,3 +23,16 @@ def validate():
     return jsonify({'creditcard': cr.get_number(), 'valid': True})
   else:
     return jsonify({'creditcard': cr.get_number(), 'valid': False})
+
+@app.route('/validate_file', methods=['POST'])
+def validate_file():
+  assert request.path == '/validate_file'
+  assert request.method == 'POST'
+  file = request.files['file']
+  new_file = File(file)
+  if(new_file.upload()):
+    result = new_file.validate_credit_cards() 
+
+  print result
+
+  return jsonify(result)

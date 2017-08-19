@@ -13,7 +13,8 @@
   <div id="form"></div>
 
   <h2>Validate by file (.txt)</h2>
-  Upload file: <form id="#uploadForm" enctype="multipart/form-data"><input type="file" name="file" /><button id="go-file">Go</button></form>
+  Upload file: <form id="uploadForm" method="post" enctype="multipart/form-data"><input type="file" name="file" /><button id="go-file">Go</button></form>
+  <div class="result-file"></div>
 </div>
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
@@ -46,6 +47,33 @@
     });
   });
 
+  // form file submit
+  $("form#uploadForm").submit(function(){
+
+      var formData = new FormData($(this)[0]);
+
+      $.ajax({
+          url: '/validate_file',
+          type: 'POST',
+          data: formData,
+          async: true,
+          success: function (data) {
+            $('.result-file').html('');
+            for(var i=0; i<data.length; i++){
+              if(data[i].valid){
+                $('.result-file').append('<p class="valid">'+data[i].creditcard+': Valid </p>');
+              }else{
+                $('.result-file').append('<p class="invalid">'+data[i].creditcard+': Invalid </p>');
+              }
+            }
+          },
+          cache: false,
+          contentType: false,
+          processData: false
+      });
+
+      return false;
+  });
 </script>
 </body>
 </html>
