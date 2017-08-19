@@ -1,1 +1,1 @@
-web gunicorn app_creditcard:app
+web: gunicorn -w 4 app_creditcard:app
