@@ -1,1 +1,1 @@
-web gunicorn manage:app
+web gunicorn app_creditcard:app_creditcard
