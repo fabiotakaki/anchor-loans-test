@@ -1,4 +1,3 @@
--e git+https://git.heroku.com/anchor-loans-test.git@64e881011da56f7fbf4690afad24fc6b757a3bb6#egg=app_creditcard
 click==6.7
 Flask==0.12.2
 gunicorn==19.7.1
