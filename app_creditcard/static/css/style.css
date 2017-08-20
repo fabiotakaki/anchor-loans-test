@@ -31,9 +31,9 @@ body {
   .content .result-file {
     margin-bottom: 40px; }
   .content .form-quantity {
-    min-width: 220px; }
+    min-width: 205px; }
   .content .form-creditcard {
-    min-width: 157px; }
+    min-width: 146px; }
   .content .form-control {
     margin: 5px 0;
     border: none;
@@ -42,10 +42,16 @@ body {
     border-bottom: 1px solid #fff;
     padding: 5px; }
     .content .form-control::-webkit-input-placeholder {
+      font-family: 'Roboto', cursive;
+      font-size: 11px;
       color: #fff; }
     .content .form-control::-moz-placeholder {
+      font-family: 'Roboto', cursive;
+      font-size: 11px;
       color: #fff; }
     .content .form-control:-ms-input-placeholder {
+      font-family: 'Roboto', cursive;
+      font-size: 11px;
       color: #fff; }
     .content .form-control:focus {
       outline: 0;
@@ -60,6 +66,9 @@ body {
     .content button:hover {
       background: #fff;
       color: #2c3e50; }
+    .content button:focus {
+      outline: 0;
+      box-shadow: none; }
   .content input[type=file] {
     border-bottom: 1px solid #fff;
     padding: 4px; }

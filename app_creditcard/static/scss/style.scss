@@ -46,11 +46,11 @@ body{
   }
 
   .form-quantity{
-    min-width: 220px;
+    min-width: 205px;
   }
 
   .form-creditcard{
-    min-width: 157px;
+    min-width: 146px;
   }
 
   .form-control{
@@ -61,14 +61,20 @@ body{
     border-bottom: 1px solid #fff;
     padding:5px;
     &::-webkit-input-placeholder {
+      font-family: 'Roboto', cursive;
+      font-size:11px;
       color:#fff;
     }
 
     &::-moz-placeholder {
+      font-family: 'Roboto', cursive;
+      font-size:11px;
       color:#fff;
     }
 
     &:-ms-input-placeholder {
+      font-family: 'Roboto', cursive;
+      font-size:11px;
       color:#fff;
     }
 
@@ -88,6 +94,10 @@ body{
     &:hover{
       background:#fff;
       color:#2c3e50;
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: none;
     }
   }
 
