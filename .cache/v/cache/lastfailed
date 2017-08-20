@@ -1,0 +1,3 @@
+{
+  "tests/test_app_creditcard.py::AppCreditCardTestCase::test_valid_credt_card": true
+}
