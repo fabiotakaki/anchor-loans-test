@@ -1,7 +1,10 @@
 MANIFEST.in
+setup.cfg
+setup.py
 app_creditcard/__init__.py
 app_creditcard/app_creditcard.py
 app_creditcard/creditcard.py
+app_creditcard/file.py
 app_creditcard.egg-info/PKG-INFO
 app_creditcard.egg-info/SOURCES.txt
 app_creditcard.egg-info/dependency_links.txt
