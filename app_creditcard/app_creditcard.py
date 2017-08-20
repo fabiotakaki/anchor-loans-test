@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, g, redirect, url_for, abort, render_template, jsonify
+from flask import Flask, request, render_template, jsonify
 from creditcard import CreditCard
 from file import File
 
@@ -32,7 +32,6 @@ def validate_file():
   new_file = File(file)
   if(new_file.upload()):
     result = new_file.validate_credit_cards() 
-
-  print result
-
-  return jsonify(result)
+    return jsonify(result)
+  else:
+    return jsonify({'error': 'File Upload failed.'})

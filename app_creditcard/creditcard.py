@@ -6,7 +6,7 @@ class CreditCard:
   def get_number(self):
     return self.number
 
-  # (?!.*([0-9])\1{3}) - Case 1: 111x-xxxx-xxxx-xxxx
+  # (?!.*([0-9])\1{3}) - Case 1: 1111-xxxx-xxxx-xxxx
   # (?!.*([0-9])\2{1,}-\2{1,}) - Case 2: xx11-11xx-xxxx-xxxx
   # (?!.*([0-9])\3{3}-\3{1}) - Case 3: x111-1xxx-xxxx-xxxx
   # (?!.*([0-9])-\4{3})(?!.*([0-9])-\4{3}) Case 4: xxx1-111x-xxxx-xxxx

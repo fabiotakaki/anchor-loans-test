@@ -26,7 +26,9 @@ class File:
       lines = deque(file.readlines())
       quantity_cc = int(lines.popleft())
       if(quantity_cc < 0 or quantity_cc > 100):
-        return None
+        return {'error': 'The reported number of credit cards must be between 0 and 100.'}
+      elif(len(lines) != quantity_cc):
+        return {'error': 'The reported number of credit cards must be in accordance with the number of credit cards in the file.'}
       else:
         result = []
         while(lines):
