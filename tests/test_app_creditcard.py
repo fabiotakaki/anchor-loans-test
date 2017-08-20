@@ -9,9 +9,16 @@ class AppCreditCardTestCase(unittest.TestCase):
     app_creditcard.app.testing = True
     self.app = app_creditcard.app.test_client()
 
-  def test_valid_credit_card(self):
+  # Valid credit card without hyphen
+  def test_valid_cc_without_hyphen(self):
     rv = self.app.post('/validate', data=dict(creditcard='4123456789123456'))
     assert b'4123456789123456' in rv.data 
+    assert b'true' in rv.data
+
+  # Valid credit card with hyphen
+  def test_valid_cc_with_hyphen(self):
+    rv = self.app.post('/validate', data=dict(creditcard='4123-4567-8912-3456'))
+    assert b'4123-4567-8912-3456' in rv.data 
     assert b'true' in rv.data
 
   # Must start with 4,5,6 (testing with 4)
