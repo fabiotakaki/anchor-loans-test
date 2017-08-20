@@ -1,28 +1,67 @@
 body {
   background: url("../img/background.jpg") no-repeat;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', cursive; }
 
 .content {
-  background: #333;
+  background: rgba(44, 62, 80, 0.85);
   color: #fff;
   text-align: center;
-  padding: 20px;
-  margin: 100px 0;
-  border-radius: 5px; }
-
-.valid, .invalid {
-  margin: 4px; }
-
-.valid {
-  color: green; }
-
-.invalid {
-  color: red; }
-
-input[type=text] {
-  margin: 5px 0; }
+  display: table;
+  height: 100vh;
+  width: 100%; }
+  .content .credit-cards {
+    display: flex;
+    width: 43%;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap; }
+  .content .wrap-content {
+    display: table-cell;
+    vertical-align: middle; }
+  .content .valid, .content .invalid {
+    margin: 4px;
+    font-size: 13px; }
+  .content .valid {
+    color: green; }
+  .content .invalid {
+    color: red; }
+  .content .result-file {
+    margin-bottom: 40px; }
+  .content .form-quantity {
+    min-width: 220px; }
+  .content .form-creditcard {
+    min-width: 157px; }
+  .content .form-control {
+    margin: 5px 0;
+    border: none;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding: 5px; }
+    .content .form-control::-webkit-input-placeholder {
+      color: #fff; }
+    .content .form-control::-moz-placeholder {
+      color: #fff; }
+    .content .form-control:-ms-input-placeholder {
+      color: #fff; }
+    .content .form-control:focus {
+      outline: 0;
+      box-shadow: none;
+      color: #fff; }
+  .content button {
+    background: none;
+    border: 2px solid #fff;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.5s ease; }
+    .content button:hover {
+      background: #fff;
+      color: #2c3e50; }
+  .content input[type=file] {
+    border-bottom: 1px solid #fff;
+    padding: 4px; }
 
 /*# sourceMappingURL=style.css.map */

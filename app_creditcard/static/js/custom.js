@@ -6,8 +6,7 @@ $('#go').click(function (argument) {
   }else{
     $('#form').html('');
     for(var i=0; i<qtd; i++){
-      $('<input/>').attr({ type: 'text', id: 'creditcard'+i, name: 'creditcard'+i, placeholder: 'Enter your number of credit card', class: 'credit-card'}).appendTo('#form');
-      $('<br>').appendTo('#form');
+      $('<input/>').attr({ type: 'text', id: 'creditcard'+i, name: 'creditcard'+i, placeholder: 'Enter your credit card number', class: 'form-control form-creditcard'}).appendTo('#form');
     }
   }
 });
@@ -17,9 +16,9 @@ $('#form').on('keyup', 'input', function() {
   var x = $(this);
   $.post( "/validate", { creditcard: $(this).val() }, function( data ) {
     if(data.valid){
-      x.css('border', '3px solid green');
+      x.css('border-bottom', '1px solid green');
     }else{
-      x.css('border', '3px solid red');
+      x.css('border-bottom', '1px solid red');
     }
   });
 });
